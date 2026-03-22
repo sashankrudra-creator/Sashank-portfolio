@@ -1,0 +1,47 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Resume{% endblock %}
+
+{% block content %}
+<section id="resume" class="section certs-section" style="padding-top: 150px; min-height: 80vh;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Career Profile</span>
+            <h2 class="section-title">Coding Profiles & Resume</h2>
+        </div>
+
+        <!-- Coding Profiles Section -->
+        <div style="display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; margin-bottom: 4rem;">
+            <!-- LeetCode -->
+            <a href="https://leetcode.com/u/sashank_rudra/" target="_blank" rel="noopener noreferrer" class="btn btn-secondary glass" style="display: flex; align-items: center; gap: 0.8rem; padding: 1rem 2rem; border-radius: 50px; transition: transform 0.3s ease;">
+                <img src="{% static 'logos/LeetCode.png' %}" alt="LeetCode" style="height: 28px; object-fit: contain;">
+                <span style="font-weight: 600; font-size: 1.1rem;">LeetCode</span>
+            </a>
+            
+            <!-- GeeksForGeeks -->
+            <a href="https://www.geeksforgeeks.org/profile/sashankgcbt?tab=activity" target="_blank" rel="noopener noreferrer" class="btn btn-secondary glass" style="display: flex; align-items: center; gap: 0.8rem; padding: 1rem 2rem; border-radius: 50px; transition: transform 0.3s ease;">
+                <img src="{% static 'logos/geekforgeeks.jpg' %}" alt="GeeksForGeeks" style="height: 28px; border-radius: 6px; object-fit: contain;">
+                <span style="font-weight: 600; font-size: 1.1rem;">GeeksForGeeks</span>
+            </a>
+            
+            <!-- CodeChef -->
+            <a href="https://www.codechef.com/users/sashankrudra" target="_blank" rel="noopener noreferrer" class="btn btn-secondary glass" style="display: flex; align-items: center; gap: 0.8rem; padding: 1rem 2rem; border-radius: 50px; transition: transform 0.3s ease;">
+                <img src="{% static 'logos/codechef.jpg' %}" alt="CodeChef" style="height: 28px; border-radius: 6px; object-fit: contain;">
+                <span style="font-weight: 600; font-size: 1.1rem;">CodeChef</span>
+            </a>
+        </div>
+
+        <!-- Resume Download -->
+        <div class="certs-grid">
+            <a href="{% static 'resume/resume.pdf' %}" target="_blank" class="cert-card glass" style="max-width: 400px; margin: 0 auto; text-align: center;">
+                <i data-lucide="file-text" class="cert-icon" style="margin: 0 auto; margin-bottom: 1rem;"></i>
+                <div class="cert-info">
+                    <h3>Download Resume</h3>
+                    <p>Click here to view or securely download my professional Curriculum Vitae.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

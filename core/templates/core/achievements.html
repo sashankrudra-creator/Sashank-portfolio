@@ -1,0 +1,93 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Achievements{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding-top: 120px; margin-bottom: 20px;">
+    <span class="section-subtitle">Milestones</span>
+    <h2 class="section-title">My Achievements</h2>
+</div>
+
+<!-- Achievement 1 -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation-duration: 1.5s;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Milestone 1</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">GATE 2026 Qualifier(AIR-1863)</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 0;">Achieved an impressive All India Rank
+                of <strong>1863</strong> in my First attempt,demonstrating strong knowledge in
+                AI,ML,DBMSWarehousing,DSA,Algebra,Calculus
+                & probability and statistics,Aptitude</p>
+        </div>
+        <div class="hero-image-container"
+            style="display: flex; justify-content: center; align-items: center; max-width: 200px; margin: 0 auto;">
+            <div class="hero-image-blob"
+                style="width: 250px; height: 250px; background: linear-gradient(135deg, #1d4ed8, #3b82f6); opacity: 0.15;">
+            </div>
+            <i data-lucide="award"
+                style="width: 120px; height: 120px; color: #2563eb; position: relative; z-index: 10;"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Achievement 2 -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation-duration: 1.5s;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Milestone 2</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">CodeChef 2-Star Coder</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 0;">Recognized for competitive
+                programming performance, actively participating and solving rigorous algorithmic challenges.</p>
+        </div>
+        <div class="hero-image-container"
+            style="display: flex; justify-content: center; align-items: center; max-width: 200px; margin: 0 auto;">
+            <div class="hero-image-blob"
+                style="width: 250px; height: 250px; background: linear-gradient(135deg, #10b981, #059669); opacity: 0.15;">
+            </div>
+            <img src="{% static 'logos/codechef.jpg' %}"
+                style="max-width: 150px; position: relative; z-index: 10; border-radius: 10px;" alt="CodeChef">
+        </div>
+    </div>
+</section>
+
+<!-- Achievement 3 -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation-duration: 1.5s;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Milestone 3</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">LeetCode 200+ Solved</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 0;">Successfully solved over 200 Data
+                Structures and Algorithms problems, improving coding proficiency and logic building.</p>
+        </div>
+        <div class="hero-image-container"
+            style="display: flex; justify-content: center; align-items: center; max-width: 200px; margin: 0 auto;">
+            <div class="hero-image-blob"
+                style="width: 250px; height: 250px; background: linear-gradient(135deg, #f59e0b, #ca8a04); opacity: 0.15;">
+            </div>
+            <img src="{% static 'logos/LeetCode.png' %}" style="max-width: 150px; position: relative; z-index: 10;"
+                alt="LeetCode">
+        </div>
+    </div>
+</section>
+
+<!-- Achievement 4 -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation-duration: 1.5s;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Milestone 4</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">GeeksForGeeks 200+</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 0;">Dedicated continuous learning and
+                practice on GeeksforGeeks platform with 200+ coding problems solved.</p>
+        </div>
+        <div class="hero-image-container"
+            style="display: flex; justify-content: center; align-items: center; max-width: 200px; margin: 0 auto;">
+            <div class="hero-image-blob"
+                style="width: 250px; height: 250px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); opacity: 0.15;">
+            </div>
+            <img src="{% static 'logos/geekforgeeks.jpg' %}"
+                style="max-width: 150px; position: relative; z-index: 10; border-radius: 10px;" alt="GeeksForGeeks">
+        </div>
+    </div>
+</section>
+{% endblock %}

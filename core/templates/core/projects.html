@@ -1,0 +1,94 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Projects{% endblock %}
+
+{% block content %}
+<section id="projects" class="section projects-section" style="padding-top: 150px; min-height: 80vh;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Portfolio</span>
+            <h2 class="section-title">My Projects</h2>
+        </div>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card glass">
+                <div class="project-img-container">
+                    <img src="{% static 'core/project1.png' %}?v=2" alt="Recommendation System" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>Internship Recommendation System</h3>
+                    <p>An intelligent platform that matches candidates with relevant internship opportunities
+                        using advanced filtering.</p>
+                    <div class="project-tags">
+                        <span>Python</span>
+                        <span>Machine Learning</span>
+                        <span>NLP</span>
+                    </div>
+                    <div class="project-links" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="github" style="width: 18px; height: 18px;"></i>View Code</a>
+                        <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="external-link" style="width: 18px; height: 18px;"></i>Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 2 -->
+            <div class="project-card glass">
+                <div class="project-img-container">
+                    <img src="{% static 'core/project2.png' %}?v=2" alt="Helmet Detection" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>Helmet & Plate Detection</h3>
+                    <p>Real-time computer vision system to identify riders without helmets and extract license
+                        plate numbers.</p>
+                    <div class="project-tags">
+                        <span>OpenCV</span>
+                        <span>Deep Learning</span>
+                    </div>
+                    <div class="project-links" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="github" style="width: 18px; height: 18px;"></i>View Code</a>
+                        <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="external-link" style="width: 18px; height: 18px;"></i>Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 3 -->
+            <div class="project-card glass">
+                <div class="project-img-container">
+                    <img src="{% static 'core/project3.png' %}?v=2" alt="Car Damage Assessment" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>Car Damage Assessment</h3>
+                    <p>Automated visual inspection tool for insurance and repair shops to detect and classify
+                        vehicle damage.</p>
+                    <div class="project-tags">
+                        <span>Neural Networks</span>
+                        <span>Computer Vision</span>
+                    </div>
+                    <div class="project-links" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="github" style="width: 18px; height: 18px;"></i>View Code</a>
+                        <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="external-link" style="width: 18px; height: 18px;"></i>Live Demo</a>
+                    </div>
+                </div>
+            </div>
+            <!-- Project 4 (Portfolio) -->
+            <div class="project-card glass">
+                <div class="project-img-container">
+                    <img src="{% static 'core/image.png' %}?v=2" alt="Car Damage Assessment" class="project-img">
+                </div>
+                <div class="project-info">
+                    <h3>Personal Portfolio</h3>
+                    <p>A dynamic, responsive, and beautifully animated web application built to showcase my projects, skills, and overall professional journey.</p>
+                    <div class="project-tags">
+                        <span>Django</span>
+                        <span>HTML/CSS</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <div class="project-links" style="display: flex; gap: 1rem; margin-top: 1.5rem;">
+                        <a href="#" target="_blank" class="btn btn-secondary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="github" style="width: 18px; height: 18px;"></i>View Code</a>
+                        <a href="#" target="_blank" class="btn btn-primary" style="padding: 0.6rem 1rem; font-size: 0.9rem; flex: 1; display: flex; align-items: center; justify-content: center; gap: 0.5rem;"><i data-lucide="external-link" style="width: 18px; height: 18px;"></i>Live Demo</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

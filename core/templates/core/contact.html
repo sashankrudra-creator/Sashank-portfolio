@@ -1,0 +1,45 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Contact{% endblock %}
+
+{% block content %}
+<section id="contact" class="section contact-section" style="padding-top: 150px; min-height: 80vh;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Get in Touch</span>
+            <h2 class="section-title">Let's Work Together</h2>
+        </div>
+        <div class="contact-grid glass"
+            style="background: rgba(255, 255, 255, 0.5); border: 1px solid var(--glass-border);">
+            
+            <!-- Direct Contact Buttons -->
+            <div style="display: flex; justify-content: center; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; border-bottom: 1px solid var(--glass-border); padding-bottom: 2.5rem;">
+                <!-- Phone/Calling -->
+                <a href="tel:+919381380680" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; flex: 1; justify-content: center; min-width: 150px;">
+                    <i data-lucide="phone" style="width: 20px; height: 20px; color: var(--primary-color);"></i>
+                    <span style="font-weight: 600;">9381380680</span>
+                </a>
+                <!-- WhatsApp/Messaging -->
+                <a href="https://wa.me/919381380680" target="_blank" rel="noopener noreferrer" class="btn btn-secondary" style="display: flex; align-items: center; gap: 0.5rem; padding: 0.8rem 1.5rem; flex: 1; justify-content: center; min-width: 150px; border-color: rgba(16, 185, 129, 0.3);">
+                    <i data-lucide="message-circle" style="width: 20px; height: 20px; color: #10b981;"></i>
+                    <span style="font-weight: 600;">Message</span>
+                </a>
+            </div>
+
+            <form class="contact-form">
+                <div class="input-group">
+                    <input type="text" placeholder="Your Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" value="sashankrudra@gmail.com" readonly>
+                </div>
+                <div class="input-group">
+                    <textarea placeholder="Message" rows="5" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+        </div>
+    </div>
+</section>
+{% endblock %}

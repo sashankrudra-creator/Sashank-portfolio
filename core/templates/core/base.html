@@ -1,0 +1,98 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Sashank Rudra - Full Stack Developer & AI Engineer">
+    <title>Sashank Rudra | {% block title %}Portfolio{% endblock %}</title>
+    <!-- CACHE BUST v2.2 added to force browsers to load latest layout -->
+    <link rel="stylesheet" href="{% static 'core/style.css' %}?v=2.2">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    {% block extra_head %}{% endblock %}
+</head>
+
+<body>
+    <div class="cursor-glow"></div>
+
+    <nav class="navbar glass">
+        <div class="container nav-container">
+            <div class="logo"><a href="{% url 'index' %}" style="text-decoration: none; color: inherit;">SR</a></div>
+            
+            <!-- Centered Navigation Links -->
+            <ul class="nav-links">
+                <li><a href="{% url 'index' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'index' %}active{% endif %}">Home</a>
+                </li>
+                <li><a href="{% url 'about' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif %}">About</a>
+                </li>
+
+                <li><a href="{% url 'projects' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'projects' %}active{% endif %}">Projects</a>
+                </li>
+                <li><a href="{% url 'certifications' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'certifications' %}active{% endif %}">Certs</a>
+                </li>
+                <li><a href="{% url 'internships' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'internships' %}active{% endif %}">Internships</a>
+                </li>
+
+
+                <li><a href="{% url 'resume' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'resume' %}active{% endif %}">Resume</a>
+                </li>
+                <li><a href="{% url 'contact' %}"
+                        class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif %}">Contact</a>
+                </li>
+            </ul>
+
+            <!-- Right side social links -->
+            <div class="top-social-links">
+                <a href="mailto:sashankrudra@gmail.com" class="top-social-link" title="Email"><i
+                        data-lucide="mail"></i></a>
+                <a href="https://www.linkedin.com/in/sashank-rudra-2425aa296" target="_blank"
+                    class="top-social-link" title="LinkedIn"><i data-lucide="linkedin"></i></a>
+                <a href="https://github.com/sashankrudra-creator" target="_blank" class="top-social-link"
+                    title="GitHub"><i data-lucide="github"></i></a>
+                <a href="https://www.instagram.com/sashank_rudra" target="_blank" class="top-social-link"
+                    title="Instagram"><i data-lucide="instagram"></i></a>
+            </div>
+
+            <div class="menu-toggle" id="mobile-menu">
+                <i data-lucide="menu"></i>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Sashank Rudra. All rights reserved.</p>
+            <div class="social-links">
+                <a href="mailto:sashankrudra@gmail.com"><i data-lucide="mail"></i></a>
+                <a href="https://www.linkedin.com/in/sashank-rudra-2425aa296" target="_blank"><i
+                        data-lucide="linkedin"></i></a>
+                <a href="https://github.com/sashankrudra-creator" target="_blank"><i data-lucide="github"></i></a>
+                <a href="https://www.instagram.com/sashank_rudra" target="_blank"><i data-lucide="instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="{% static 'core/script.js' %}"></script>
+    <script>
+        lucide.createIcons();
+    </script>
+    {% block extra_js %}{% endblock %}
+</body>
+
+</html>

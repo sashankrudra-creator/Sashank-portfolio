@@ -1,0 +1,42 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Internships{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding-top: 120px; margin-bottom: 20px;">
+    <span class="section-subtitle">Professional Experience</span>
+    <h2 class="section-title">My Internships</h2>
+</div>
+
+<!-- Internship 1 -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation: slideInLeft 1s ease-out;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Hinisys Software</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">Machine Learning Intern</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 1.5rem;">• Worked on ML and Deep Learning models with practical implementation.<br>• Gained hands-on experience in training, evaluating, and deploying complex predictive models for real-world scenarios.</p>
+        </div>
+        <div class="hero-image-container" style="display: flex; justify-content: center; align-items: center; max-width: 250px; margin: 0 auto; animation: slideInRight 1s ease-out;">
+            <div class="hero-image-blob" style="width: 300px; height: 300px; background: linear-gradient(135deg, #10b981, #059669); opacity: 0.15;"></div>
+            <i data-lucide="brain-circuit" style="width: 120px; height: 120px; color: #10b981; position: relative; z-index: 10;"></i>
+        </div>
+    </div>
+</section>
+
+<!-- Internship 2 -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation: slideInLeft 1s ease-out 0.2s backwards;">
+            <h2 class="sub-heading" style="font-size: 1rem; color: #8b5cf6;">Datavalley Pvt. Limited</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">Python Full Stack Intern</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 1.5rem;">• Developed web applications using Django with backend and database integration.<br>• Built scalable Rest APIs, crafted responsive user interfaces, and learned complete software development lifecycle.</p>
+        </div>
+        <div class="hero-image-container" style="display: flex; justify-content: center; align-items: center; max-width: 250px; margin: 0 auto; animation: slideInRight 1s ease-out 0.2s backwards;">
+            <div class="hero-image-blob" style="width: 300px; height: 300px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); opacity: 0.15;"></div>
+            <i data-lucide="blocks" style="width: 120px; height: 120px; color: #8b5cf6; position: relative; z-index: 10;"></i>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

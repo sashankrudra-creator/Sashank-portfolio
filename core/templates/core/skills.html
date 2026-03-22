@@ -1,0 +1,32 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Skills{% endblock %}
+
+{% block content %}
+<section id="skills" class="section skills-section glass" style="padding-top: 150px; min-height: 80vh;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Expertise</span>
+            <h2 class="section-title">Technical Arsenal</h2>
+        </div>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <i data-lucide="brain" class="skill-icon"></i>
+                <h3>AI & ML</h3>
+                <p>Machine Learning, Deep Learning, Neural Networks, OpenCV</p>
+            </div>
+            <div class="skill-card">
+                <i data-lucide="code-2" class="skill-icon"></i>
+                <h3>Programming</h3>
+                <p>Python, C Language, Django, JavaScript, HTML, CSS</p>
+            </div>
+            <div class="skill-card">
+                <i data-lucide="database" class="skill-icon"></i>
+                <h3>Data & Tools</h3>
+                <p>MySQL, Computer Vision, Git, REST APIs</p>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Certifications{% endblock %}
+
+{% block content %}
+<section id="certifications" class="section certs-section" style="padding-top: 150px; min-height: 80vh;">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-subtitle">Achievements</span>
+            <h2 class="section-title">Certifications</h2>
+        </div>
+        <div class="certs-grid">
+            <a href="{% static 'certificates/generative ai.pdf' %}" target="_blank" class="cert-card glass">
+                <i data-lucide="award" class="cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Generative AI</h3>
+                    <p>Professional Certification in Generative AI concepts and applications.</p>
+                </div>
+            </a>
+            <a href="{% static 'certificates/The Joy of Computing using Python.pdf' %}" target="_blank"
+                class="cert-card glass">
+                <i data-lucide="award" class="cert-icon"></i>
+                <div class="cert-info">
+                    <h3>The Joy of Computing using Python</h3>
+                    <p>Comprehensive Python programming and algorithmic thinking.</p>
+                </div>
+            </a>
+            <a href="{% static 'certificates/promp.pdf' %}" target="_blank" class="cert-card glass">
+                <i data-lucide="award" class="cert-icon"></i>
+                <div class="cert-info">
+                    <h3>Prompt Engineering</h3>
+                    <p>Specialization in crafting effective prompts for LLMs.</p>
+                </div>
+            </a>
+            <a href="{% static 'certificates/CodeChefBadge (9).png' %}" target="_blank" class="cert-card glass">
+                <i data-lucide="code" class="cert-icon"></i>
+                <div class="cert-info">
+                    <h3>CodeChef Achievement</h3>
+                    <p>Recognition for competitive programming performance.</p>
+                </div>
+            </a>
+            <a href="{% static 'certificates/2c05e8ab-f3db-49e7-825a-2ca8fed4ab95 (1).pdf' %}" target="_blank"
+                class="cert-card glass">
+                <i data-lucide="award" class="cert-icon"></i>
+                <div class="cert-info">
+                    <h3>NPTEL / Infosys Springboard</h3>
+                    <p>Advanced technical certification in specialized computing and professional software
+                        development.</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}

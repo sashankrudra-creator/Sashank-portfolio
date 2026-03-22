@@ -1,0 +1,59 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Coding Profiles{% endblock %}
+
+{% block content %}
+<div style="text-align: center; padding-top: 120px; margin-bottom: 20px;">
+    <span class="section-subtitle">Competitive Programming</span>
+    <h2 class="section-title">Coding Profiles</h2>
+</div>
+
+<!-- LeetCode -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation: slideInLeft 1s ease-out;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Profile 1</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">LeetCode</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 1.5rem;">View my problem-solving activity, competitive rankings, and detailed coding stats on Data Structures & Algorithms.</p>
+            <a href="https://leetcode.com/u/sashank_rudra/" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Profile</a>
+        </div>
+        <div class="hero-image-container" style="display: flex; justify-content: center; align-items: center; max-width: 250px; margin: 0 auto; animation: slideInRight 1s ease-out;">
+            <div class="hero-image-blob" style="width: 300px; height: 300px; background: linear-gradient(135deg, #f59e0b, #ca8a04); opacity: 0.15;"></div>
+            <img src="{% static 'logos/LeetCode.png' %}" alt="LeetCode" style="max-height: 120px; position: relative; z-index: 10; object-fit: contain;">
+        </div>
+    </div>
+</section>
+
+<!-- GeeksForGeeks -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation: slideInLeft 1s ease-out 0.2s backwards;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Profile 2</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">GeeksForGeeks</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 1.5rem;">Check out my regular DSA practice and continuous learning journey across various technical subjects.</p>
+            <a href="https://www.geeksforgeeks.org/profile/sashankgcbt?tab=activity" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">View Profile</a>
+        </div>
+        <div class="hero-image-container" style="display: flex; justify-content: center; align-items: center; max-width: 250px; margin: 0 auto; animation: slideInRight 1s ease-out 0.2s backwards;">
+            <div class="hero-image-blob" style="width: 300px; height: 300px; background: linear-gradient(135deg, #8b5cf6, #7c3aed); opacity: 0.15;"></div>
+            <img src="{% static 'logos/geekforgeeks.jpg' %}" alt="GeeksForGeeks" style="max-height: 120px; position: relative; z-index: 10; object-fit: contain; border-radius: 15px;">
+        </div>
+    </div>
+</section>
+
+<!-- CodeChef -->
+<section class="hero-section" style="min-height: auto; padding: 40px 0; align-items: flex-start;">
+    <div class="container hero-content" style="gap: 2rem;">
+        <div class="hero-text" style="animation: slideInLeft 1s ease-out 0.4s backwards;">
+            <h2 class="sub-heading" style="font-size: 1rem;">Profile 3</h2>
+            <h1 class="main-heading" style="font-size: 2.2rem; margin-bottom: 1rem;">CodeChef</h1>
+            <p class="hero-description" style="font-size: 1rem; margin-bottom: 1.5rem;">Explore my competitive programming contests, algorithmic problem-solving speed, and recent star ratings.</p>
+            <a href="https://www.codechef.com/users/sashankrudra" target="_blank" rel="noopener noreferrer" class="btn btn-primary" style="background: linear-gradient(135deg, #10b981, #059669);">View Profile</a>
+        </div>
+        <div class="hero-image-container" style="display: flex; justify-content: center; align-items: center; max-width: 250px; margin: 0 auto; animation: slideInRight 1s ease-out 0.4s backwards;">
+            <div class="hero-image-blob" style="width: 300px; height: 300px; background: linear-gradient(135deg, #10b981, #059669); opacity: 0.15;"></div>
+            <img src="{% static 'logos/codechef.jpg' %}" alt="CodeChef" style="max-height: 120px; position: relative; z-index: 10; object-fit: contain; border-radius: 15px;">
+        </div>
+    </div>
+</section>
+{% endblock %}

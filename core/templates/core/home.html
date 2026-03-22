@@ -1,0 +1,90 @@
+{% extends 'core/base.html' %}
+{% load static %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<header id="home" class="hero-section">
+    <div class="container hero-content">
+        <div class="hero-text">
+            <h2 class="sub-heading">Hello, I'm</h2>
+            <h1 class="main-heading" style="margin-bottom: 0.5rem;">Sashank Rudra</h1>
+            <h3 class="dynamic-roles" style="font-size: 1.8rem; font-weight: 500; color: var(--primary-color); margin-bottom: 1.5rem; height: 2.2rem;"><span id="prefix-text">I'm an </span><span id="typed-text"></span><span class="cursor" style="display: inline-block; width: 3px; height: 1.6rem; background-color: var(--primary-color); animation: blink 1s step-end infinite; vertical-align: middle; margin-left: 4px;"></span></h3>
+            <p class="hero-description" style="margin-top: 0;">Transforming ideas into digital experiences with elegant code and modern
+                design.</p>
+            <div class="hero-cta">
+                <a href="{% url 'projects' %}" class="btn btn-primary">View Projects</a>
+                <a href="{% url 'contact' %}" class="btn btn-secondary">Let's Talk</a>
+            </div>
+        </div>
+        <div class="hero-image-container">
+            <div class="hero-image-blob"></div>
+            <img src="{% static 'core/profile.jpeg' %}?v=4" alt="Sashank Rudra" class="hero-image" id="hero-img">
+        </div>
+    </div>
+</header>
+<style>
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.cursor.typing {
+  animation: none !important;
+  opacity: 1 !important;
+}
+</style>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const textArray = ["ML Engineer", "Aspiring Software Engineer", "Problem Solver"];
+        const typingDelay = 100;
+        const erasingDelay = 60;
+        const newTextDelay = 2000;
+        let textArrayIndex = 0;
+        let charIndex = 0;
+
+        const typedTextSpan = document.getElementById("typed-text");
+        const prefixTextSpan = document.getElementById("prefix-text");
+        const cursorSpan = document.querySelector(".cursor");
+
+        function type() {
+            if (charIndex < textArray[textArrayIndex].length) {
+                if(!cursorSpan.classList.contains("typing")) cursorSpan.classList.add("typing");
+                
+                const word = textArray[textArrayIndex];
+                if (charIndex === 0) {
+                    if (word === "ML Engineer" || word === "Aspiring Software Engineer") {
+                        prefixTextSpan.textContent = "I'm an ";
+                    } else {
+                        prefixTextSpan.textContent = "I'm a ";
+                    }
+                }
+                
+                typedTextSpan.textContent += word.charAt(charIndex);
+                charIndex++;
+                setTimeout(type, typingDelay);
+            } 
+            else {
+                cursorSpan.classList.remove("typing");
+                setTimeout(erase, newTextDelay);
+            }
+        }
+
+        function erase() {
+            if (charIndex > 0) {
+                if(!document.querySelector(".cursor").classList.contains("typing")) document.querySelector(".cursor").classList.add("typing");
+                document.getElementById("typed-text").textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+                charIndex--;
+                setTimeout(erase, erasingDelay);
+            } 
+            else {
+                document.querySelector(".cursor").classList.remove("typing");
+                textArrayIndex++;
+                if(textArrayIndex >= textArray.length) textArrayIndex = 0;
+                setTimeout(type, typingDelay + 500);
+            }
+        }
+
+        if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+</script>
+{% endblock %}
