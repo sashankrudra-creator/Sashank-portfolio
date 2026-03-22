@@ -51,7 +51,28 @@ document.addEventListener('DOMContentLoaded', () => {
     const navRight = document.querySelector('.nav-right');
     if (menuToggle && navRight) {
         menuToggle.addEventListener('click', () => {
-            navRight.classList.toggle('active');
+            const isActive = navRight.classList.toggle('active');
+            const icon = menuToggle.querySelector('i');
+            if (isActive) {
+                icon.setAttribute('data-lucide', 'x');
+                document.body.style.overflow = 'hidden'; // Prevent scrolling when menu is open
+            } else {
+                icon.setAttribute('data-lucide', 'menu');
+                document.body.style.overflow = 'auto';
+            }
+            lucide.createIcons();
         });
     }
+
+    // Close mobile menu when a link is clicked
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+            navRight.classList.remove('active');
+            const icon = menuToggle.querySelector('i');
+            icon.setAttribute('data-lucide', 'menu');
+            document.body.style.overflow = 'auto';
+            lucide.createIcons();
+        });
+    });
 });
