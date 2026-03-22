@@ -9,9 +9,12 @@
         <div class="hero-text">
             <h2 class="sub-heading">Hello, I'm</h2>
             <h1 class="main-heading" style="margin-bottom: 0.5rem;">Sashank Rudra</h1>
-            <h3 class="dynamic-roles" style="font-size: 1.8rem; font-weight: 500; color: var(--primary-color); margin-bottom: 1.5rem; height: 2.2rem;"><span id="prefix-text">I'm an </span><span id="typed-text"></span><span class="cursor" style="display: inline-block; width: 3px; height: 1.6rem; background-color: var(--primary-color); animation: blink 1s step-end infinite; vertical-align: middle; margin-left: 4px;"></span></h3>
-            <p class="hero-description" style="margin-top: 0;">Transforming ideas into digital experiences with elegant code and modern
-                design.</p>
+            <h3 class="dynamic-roles">
+                <span id="prefix-text">I'm an </span>
+                <span id="typed-text"></span>
+                <span class="cursor"></span>
+            </h3>
+            <p class="hero-description">Transforming ideas into digital experiences with elegant code and modern design.</p>
             <div class="hero-cta">
                 <a href="{% url 'projects' %}" class="btn btn-primary">View Projects</a>
                 <a href="{% url 'contact' %}" class="btn btn-secondary">Let's Talk</a>
@@ -24,13 +27,52 @@
     </div>
 </header>
 <style>
+.dynamic-roles {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    min-height: 2.2rem;
+    line-height: 1.4;
+}
+
+.hero-description {
+    margin-top: 0;
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.cursor {
+    display: inline-block;
+    width: 3px;
+    height: 1.6rem;
+    background-color: var(--primary-color);
+    animation: blink 1s step-end infinite;
+    vertical-align: middle;
+    margin-left: 4px;
+}
+
 @keyframes blink {
   0%, 100% { opacity: 0; }
   50% { opacity: 1; }
 }
+
 .cursor.typing {
   animation: none !important;
   opacity: 1 !important;
+}
+
+@media (max-width: 768px) {
+    .dynamic-roles {
+        font-size: 1.4rem;
+        min-height: 3.5rem; /* Allow room for 2 lines if needed */
+        margin-bottom: 1rem;
+    }
+    .main-heading {
+        font-size: 2.8rem;
+        margin-bottom: 0.5rem;
+    }
 }
 </style>
 <script>
