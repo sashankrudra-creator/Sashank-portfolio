@@ -233,7 +233,7 @@ h4,
 
 .hero-content {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
   align-items: center;
   gap: 4rem;
 }
@@ -251,7 +251,7 @@ h4,
 }
 
 .main-heading {
-  font-size: 4.5rem;
+  font-size: clamp(3rem, 4.5vw + 0.5rem, 4.5rem);
   line-height: 1.1;
   margin-bottom: 1.5rem;
   font-weight: 800;
@@ -305,6 +305,9 @@ h4,
 }
 
 .hero-image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   animation: slideInRight 1s ease-out;
 }
